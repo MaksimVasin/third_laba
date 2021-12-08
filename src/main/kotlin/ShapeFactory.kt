@@ -21,33 +21,37 @@ class ShapeFactoryImpl : ShapeFactory {
     override fun createCircle(radius: Double): Circle {
         return Circle(radius)
     }
+
     override fun createRandomCircle(): Circle {
-        return createCircle(Random.nextDouble(1.0,1000.0))
+        return createCircle(Random.nextDouble(1.0, 1000.0))
     }
 
     // create square
     override fun createSquare(side: Double): Square {
         return Square(side)
     }
+
     override fun createRandomSquare(): Square {
-        return createSquare(Random.nextDouble(1.0,1000.0))
+        return createSquare(Random.nextDouble(1.0, 1000.0))
     }
 
     // create rectangle
     override fun createRectangle(width: Double, height: Double): Rectangle {
         return Rectangle(width, height)
     }
+
     override fun createRandomRectangle(): Rectangle {
-        return createRectangle(Random.nextDouble(1.0,1000.0),Random.nextDouble(1.0,1000.0))
+        return createRectangle(Random.nextDouble(1.0, 1000.0), Random.nextDouble(1.0, 1000.0))
     }
 
     // create triangle
     override fun createTriangle(sideA: Double, sideB: Double, sideC: Double): Triangle {
         return Triangle(sideA, sideB, sideC)
     }
+
     override fun createRandomTriangle(): Triangle { // get two random side lengths and one cos-value
-        val sideA = Random.nextDouble(1.0,1000.0)
-        val sideB = Random.nextDouble(1.0,1000.0)
+        val sideA = Random.nextDouble(1.0, 1000.0)
+        val sideB = Random.nextDouble(1.0, 1000.0)
         val sideC = Random.nextDouble(abs(sideA - sideB), sideA + sideB)
         // the sum of any two sides must be greater than the length of the thirds
         // A + B > C
