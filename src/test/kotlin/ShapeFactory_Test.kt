@@ -7,7 +7,7 @@ internal class ShapeFactory_Test {
     @Test
     fun createCircleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertEquals(myShapeFactory.createCircle(10.0).radiusGet(), 10.0)
+        assertEquals(myShapeFactory.createCircle(10.0).radius, 10.0)
     }
 
     @Test(expected = IllegalArgumentException::class)
@@ -19,7 +19,7 @@ internal class ShapeFactory_Test {
     @Test
     fun createRandomCircleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertNotEquals(myShapeFactory.createRandomCircle().radiusGet(), 0.0)
+        assertNotEquals(myShapeFactory.createRandomCircle().radius, 0.0)
     }
 
     @Test
@@ -38,7 +38,7 @@ internal class ShapeFactory_Test {
     @Test
     fun createSquareTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertEquals(myShapeFactory.createSquare(10.0).sideGet(), 10.0)
+        assertEquals(myShapeFactory.createSquare(10.0).side, 10.0)
     }
 
     @Test(expected = IllegalArgumentException::class)
@@ -50,7 +50,7 @@ internal class ShapeFactory_Test {
     @Test
     fun createRandomSquareTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertNotEquals(myShapeFactory.createRandomSquare().sideGet(), 0.0)
+        assertNotEquals(myShapeFactory.createRandomSquare().side, 0.0)
     }
 
     @Test
@@ -69,8 +69,8 @@ internal class ShapeFactory_Test {
     @Test
     fun createRectangleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertEquals(myShapeFactory.createRectangle(10.0, 10.0).widthGet(), 10.0)
-        assertEquals(myShapeFactory.createRectangle(10.0, 10.0).heightGet(), 10.0)
+        assertEquals(myShapeFactory.createRectangle(10.0, 10.0).width, 10.0)
+        assertEquals(myShapeFactory.createRectangle(10.0, 10.0).height, 10.0)
     }
 
     @Test(expected = IllegalArgumentException::class)
@@ -88,8 +88,8 @@ internal class ShapeFactory_Test {
     @Test
     fun createRandomRectangleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertNotEquals(myShapeFactory.createRandomRectangle().widthGet(), 0.0)
-        assertNotEquals(myShapeFactory.createRandomRectangle().heightGet(), 0.0)
+        assertNotEquals(myShapeFactory.createRandomRectangle().width, 0.0)
+        assertNotEquals(myShapeFactory.createRandomRectangle().height, 0.0)
     }
 
     @Test
@@ -108,9 +108,9 @@ internal class ShapeFactory_Test {
     @Test
     fun createTriangleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideAGet(), 15.0)
-        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideBGet(), 10.0)
-        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideCGet(), 20.0)
+        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideA, 15.0)
+        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideB, 10.0)
+        assertEquals(myShapeFactory.createTriangle(15.0, 10.0, 20.0).sideC, 20.0)
     }
 
     @Test(expected = IllegalArgumentException::class)
@@ -134,9 +134,9 @@ internal class ShapeFactory_Test {
     @Test
     fun createRandomTriangleTest() {
         val myShapeFactory: ShapeFactory = ShapeFactoryImpl()
-        assertNotEquals(myShapeFactory.createRandomTriangle().sideAGet(), 0.0)
-        assertNotEquals(myShapeFactory.createRandomTriangle().sideBGet(), 0.0)
-        assertNotEquals(myShapeFactory.createRandomTriangle().sideCGet(), 0.0)
+        assertNotEquals(myShapeFactory.createRandomTriangle().sideA, 0.0)
+        assertNotEquals(myShapeFactory.createRandomTriangle().sideB, 0.0)
+        assertNotEquals(myShapeFactory.createRandomTriangle().sideC, 0.0)
     }
 
     @Test
